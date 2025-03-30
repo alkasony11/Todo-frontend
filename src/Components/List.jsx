@@ -9,7 +9,7 @@ function List() {
     // Fetch tasks when component mounts
     useEffect(() => {
         fetchTasks();
-    }, []);
+    }, [fetchTasks]);
 
     // Function to fetch tasks
     const fetchTasks = async () => {
