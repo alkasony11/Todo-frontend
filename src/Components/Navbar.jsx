@@ -16,7 +16,7 @@ function Navbar() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post("http://localhost:3000/tasks", task);
+            await axios.post("https://todo-backend-tu1p.onrender.com/tasks", task);
             alert("Task added successfully");
             // Clear the input after successful addition
             setTask({
