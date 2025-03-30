@@ -14,7 +14,7 @@ function List() {
     // Function to fetch tasks
     const fetchTasks = async () => {
         try {
-            const response = await axios.get("http://localhost:3000/tasks");
+            const response = await axios.get("https://todo-backend-tu1p.onrender.com/tasks");
             setTasks(response.data);
         } catch (error) {
             console.error("Error fetching tasks:", error);
@@ -25,7 +25,7 @@ function List() {
     // Function to delete task
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:3000/tasks/${id}`);
+            await axios.delete(`https://todo-backend-tu1p.onrender.com/tasks/${id}`);
             alert("Task deleted successfully");
             fetchTasks(); // Refresh the list
         } catch (error) {
@@ -46,7 +46,7 @@ function List() {
             return;
         }
         try {
-            await axios.put(`http://localhost:3000/tasks/${id}`, {
+            await axios.put(`https://todo-backend-tu1p.onrender.com/tasks/${id}`, {
                 name: editedName.trim()
             });
             setEditingTask(null);
